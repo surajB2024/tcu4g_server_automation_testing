@@ -1,0 +1,56 @@
+<!-- Instructions to set up this file as the configuration for your test 
+	cases: 1. In your IDE, configure the TestNG run configuration to use this 
+	XML file. 3. Ensure your test classes (BaseTest and LoginTests) are in the 
+	correct package structure. 4. Verify that the CustomTestListener class is 
+	implemented and in the correct package. 5. Check that all method names in 
+	the LoginTests class match those listed in this file. 6. To run the tests, 
+	right-click on this file in your IDE and select 'Run' or 'Run as TestNG Suite'. -->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Login Test Suite">
+	<listeners>
+		<listener class-name="CustomTestListener" />
+	</listeners>
+	<test name="Login Functionality Tests">
+		<classes>
+			<class name="BaseTest" />
+			<class name="LoginPageTests">
+				<methods>
+					<include name="testNavigateToWebsite" />
+					<include name="testLoginPageDisplayed" />
+					<include name="testValidLogin" />
+					<include name="testEmailFieldAcceptsVariousCharacters" />
+					<include name="testPasswordFieldAcceptsVariousCharacters" />
+					<include name="testInvalidEmailValidPassword" />
+					<include name="testValidEmailInvalidPassword" />
+					<include name="testBlankCredentials" />
+					<include name="testShortPassword" />
+					<include name="testForgotPasswordLink" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+<suite name="Ticketing Test Suite">
+	<listeners>
+		<listener class-name="CustomTestListener" />
+	</listeners>
+	<test name="Ticketing Tool Functionality">
+		<classes>
+			<class name="BaseTest" />
+			<class name="TicketPageTests">
+				<methods>
+					<include name="testNavigateToWebsite" />
+					<include name="testLoginPageDisplayed" />
+					<include name="testValidLogin" />
+					<include name="testEmailFieldAcceptsVariousCharacters" />
+					<include name="testPasswordFieldAcceptsVariousCharacters" />
+					<include name="testInvalidEmailValidPassword" />
+					<include name="testValidEmailInvalidPassword" />
+					<include name="testBlankCredentials" />
+					<include name="testShortPassword" />
+					<include name="testForgotPasswordLink" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
